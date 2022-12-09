@@ -1,0 +1,10 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "bento/ubuntu-20.04"
+  config.vm.network "public_network"
+  config.vm.provision "shell", path: "/home/pjsjr/Documentos/Bootcamp - Cloud DevOps Experience - Banco Carrefour/Scripts/script-iac2.sh"
+      
+  config.vm.provider :virtualbox do |vb|
+    vb.name = "Servidor WEB"
+    
+  end
+end
